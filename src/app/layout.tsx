@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Murecho } from "next/font/google";
 import "./globals.css";
+import ContainerWrapper from "@/app/Container";
+import Header from "./header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Murecho({ subsets: ["latin-ext"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-[#ebf0f5]`}>
+        <Header />
+        <ContainerWrapper>
+          {children}
+        </ContainerWrapper>
+      </body>
     </html>
   );
 }
