@@ -21,6 +21,7 @@ type FlightJourneyContentType = {
     plane_class: string;
     children?: ReactElement;
 }
+
 const FlightJourneyContent: FC<FlightJourneyContentType> = ({ plane_name, flight_no, plane_industry, plane_class, children }) => {
     return (
         <>
@@ -157,7 +158,7 @@ const Card = () => {
     )
 }
 
-const Right = () => {
+const RightContent = () => {
     return (
         <div className="flex flex-col gap-y-5 w-full">
             {/* page paths*/}
@@ -180,4 +181,4 @@ const Right = () => {
 }
 
 
-export default Right;
+export default RightContent;

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import LeftContent from "./Left";
-import RightContent from "./Right";
+import LeftContent from "./LeftContent";
+import RightContent from "./RightContent";
 
 export default function Home() {
   return (
